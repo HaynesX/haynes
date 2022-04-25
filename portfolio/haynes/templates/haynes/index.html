@@ -1,0 +1,351 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Haynes - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'haynes/assets/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <div class="page-loader">
+		<div class="loader">Loading...</div>
+	</div>
+    <div class="sidebar">
+        <nav class="navbar navbar-custom font-alt">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+                <a class="navbar-brand" href="https://klbtheme.com/black/" title="Black – Minimal Portfolio Theme">
+                    <img class="light-logo" src="{% static 'haynes/assets/images/logo-haynes.png' %}"
+                        alt="Black – Minimal Portfolio Theme">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="custom-collapse">
+                <ul id="menu-menu-1" class="nav navbar-nav">
+                    <li
+                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children dropdown">
+                        <a href="#" data-toggle="dropdown" class="binded">Home</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-89 current_page_item">
+                                <a href="#">Image</a>
+                            </li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">Slider</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">Old Image</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">Video</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">Black Bar</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">Menu Background</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                            href="#">About</a></li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown">
+                        <a href="#" data-toggle="dropdown" class="binded">Blog</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">Standard</a></li>
+                            <li
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown">
+                                <a href="#" data-toggle="dropdown" class="binded">Single</a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-post"><a
+                                            href="#">Standard
+                                            Post</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-post"><a
+                                            href="#">Slider Post</a>
+                                    </li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-post"><a
+                                            href="#">Video Post</a>
+                                    </li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-post"><a
+                                            href="#">Audio
+                                            Post</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown">
+                        <a href="#" data-toggle="dropdown" class="binded">Portfolio</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-portfolio"><a
+                                    href="#">Single Work 1</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-portfolio"><a
+                                    href="#">Single Work 2</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-portfolio"><a
+                                    href="#">Single Works 3</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-portfolio"><a
+                                    href="#">Single Work 4 &amp; Youtube</a>
+                            </li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-portfolio"><a
+                                    href="#">Single Work 5 &amp;
+                                    Vimeo</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-portfolio"><a
+                                    href="#">Single Work 6 &amp;
+                                    Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown">
+                        <a href="#" data-toggle="dropdown" class="binded">Elements</a>
+                        <ul class="dropdown-menu" role="menu" style="">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">BUTTONS</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">Load More</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">ICONBOX</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">PROGRESS BARS</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">Tab &amp; Accordian</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">COLUMNS</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown">
+                        <a href="#" data-toggle="dropdown" class="binded">Features</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">Works Gutter 3 col</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">Works Gutter 4 col</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">Works Masonry 3 col</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                    href="#">Works Masonry 4 col</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                            href="#">Contact</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <!-- SOCIAL LINKS -->
+        <div class="copyright">
+            <div class="social-icons m-b-20">
+                <a href="https://facebook.com" class="fa fa-facebook" target="_blank"></a><a href="https://twitter.com"
+                    class="fa fa-twitter" target="_blank"></a><a href="https://instagram.com" class="fa fa-instagram"
+                    target="_blank"></a><a href="https://www.behance.net" class="fa fa-behance" target="_blank"></a><a
+                    href="https://dribbble.com/" class="fa fa-dribbble" target="_blank"></a>
+            </div>
+            <p>Copyright 2021 Brandon Haynes</p>
+        </div>
+        <!-- /SOCIAL LINKS -->
+
+    </div>
+
+    <div class="slider-section wrapper">
+        <div class="main-slider">
+            <div class="slick-slider">
+                <div>
+                    <figure class="slick-img-container bg-film cam-container">
+                        <img class="img-fluid" src="{% static 'haynes/assets/images/slider-1.jpg' %}" />
+                    </figure>
+                    <div class="hero-caption">
+                        <div class="hero-text">
+                            <h6>BASED IN NORTHAMPTON - UK</h6>
+                            <h1>BRANDON HAYNES</h1>
+                            <h6 class="last-text">WEB DEVELOPER</h6>
+                            <a class="btn btn-dark anim-scroll" href="#portfolio" target="" title="LEARN MORE">LEARN
+                                MORE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <figure class="slick-img-container cam-container">
+                        <img class="img-fluid" src="{% static 'haynes/assets/images/slider-2.jpg' %}" />
+                    </figure>
+                    <div class="hero-caption">
+                        <div class="hero-text">
+                            <h6 class="m-b-30">PYTHON DEVELOPER</h6>
+                            <h1 class="m-b-30">UNDERGRADUATE STUDENT</h1>
+                            <h6 class="m-b-60">STUDYING WEB TECHNOLOGY & SECURITY</h6><a class="btn btn-dark anim-scroll"
+                                href="#portfolio" target="" title="ABOUT">ABOUT</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <figure class="slick-img-container">
+                        <img class="img-fluid" src="{% static 'haynes/assets/images/slider-3.jpg' %}" />
+                    </figure>
+                    <div class="hero-caption">
+                        <div class="hero-text">
+                            <h6 class="m-b-30">LOOKING FOR WORK</h6>
+                            <h1 class="m-b-30">CONTACT ME</h1>
+                            <h6 class="m-b-60">REMOTE WORK AVAILABLE</h6><a class="btn btn-dark anim-scroll" href="#portfolio" target="" title="SEE MORE">CONTACT ME</a></div></div>
+                </div>
+            </div>
+        </div>
+
+        <section class="filter-section">
+            <div id="filters" class="filters-btn">
+                <li><a class="btn is-checked" data-filter="*">All</a></li>
+                <li><a class="btn" data-filter=".metal">Web</a></li>
+                <li><a class="btn" data-filter=".transition">CI/CD</a></li>
+                <li><a class="btn" data-filter=".alkali">Web Scraping</a></li>
+                <li><a class="btn" data-filter=".video">Other</a></li>
+            </div>
+
+            <div class="portfolio-grid">
+                <article class="element-item alkali video" data-category="transition">
+                    <div class="work-wrapper">
+                        <div class="work-thumbnail">
+                            <img src="https://klbtheme.com/black/wp-content/uploads/2017/04/portfolio-1.jpg"
+                                alt="Montures">
+                        </div>
+                        <div class="work-caption">
+                            <h3 class="work-title font-alt">Web Development</h3>
+                            <span class="work-category font-serif">Python / Django</span>
+                        </div>
+                        <a href="https://klbtheme.com/black/portfolio/montures/" class="work-link"></a>
+                    </div>
+                </article>
+                <article class="element-item metalloid metal " data-category="metalloid">
+                    <div class="work-wrapper">
+                        <div class="work-thumbnail"><img
+                                src="https://klbtheme.com/black/wp-content/uploads/2017/04/portfolio-8.jpg"
+                                alt="Rambler &amp; Co"></div>
+                        <div class="work-caption">
+                            <h3 class="work-title font-alt">Rambler &amp; Co</h3><span
+                                class="work-category font-serif">Fashion</span>
+                        </div><a href="https://klbtheme.com/black/portfolio/rambler-co/" class="work-link"></a>
+                    </div>
+                </article>
+                <article class="element-item post-transition  transition" data-category="post-transition">
+                    <div class="work-wrapper">
+                        <div class="work-thumbnail"><img
+                                src="https://klbtheme.com/black/wp-content/uploads/2017/04/portfolio-2.jpg"
+                                alt="Pink Lips"></div>
+                        <div class="work-caption">
+                            <h3 class="work-title font-alt">Pink Lips</h3><span
+                                class="work-category font-serif">Music</span>
+                        </div><a href="https://klbtheme.com/black/portfolio/pink-lips/" class="work-link"></a>
+                    </div>
+                </article>
+                <article class="element-item post-transition metal " data-category="post-transition">
+                    <div class="work-wrapper">
+                        <div class="work-thumbnail"><img
+                                src="https://klbtheme.com/black/wp-content/uploads/2017/04/portfolio-3.jpg"
+                                alt="Brother"></div>
+                        <div class="work-caption">
+                            <h3 class="work-title font-alt">Brother</h3><span
+                                class="work-category font-serif">Fashion</span>
+                        </div><a href="https://klbtheme.com/black/portfolio/brother/" class="work-link"></a>
+                    </div>
+                </article>
+                <article class="element-item alkali" data-category="transition">
+                    <div class="work-wrapper">
+                        <div class="work-thumbnail"><img
+                                src="https://klbtheme.com/black/wp-content/uploads/2017/04/portfolio-4.jpg"
+                                alt="Travel Bags"></div>
+                        <div class="work-caption">
+                            <h3 class="work-title font-alt">Travel Bags</h3><span
+                                class="work-category font-serif">Travel</span>
+                        </div><a href="https://klbtheme.com/black/portfolio/travel-bags/" class="work-link"></a>
+                    </div>
+                </article>
+                <article class="element-item alkali " data-category="alkali">
+                    <div class="work-wrapper">
+                        <div class="work-thumbnail"><img
+                                src="https://klbtheme.com/black/wp-content/uploads/2017/04/portfolio-6.jpg"
+                                alt="The Handkerchief"></div>
+                        <div class="work-caption">
+                            <h3 class="work-title font-alt">The Handkerchief</h3><span
+                                class="work-category font-serif">Travel</span>
+                        </div><a href="https://klbtheme.com/black/portfolio/the-handkerchief/" class="work-link"></a>
+                    </div>
+                </article>
+                <article class="element-item   transition" data-category="alkali">
+                    <div class="work-wrapper">
+                        <div class="work-thumbnail"><img
+                                src="https://klbtheme.com/black/wp-content/uploads/2017/04/portfolio-5.jpg"
+                                alt="Workshop"></div>
+                        <div class="work-caption">
+                            <h3 class="work-title font-alt">Workshop</h3><span
+                                class="work-category font-serif">Music</span>
+                        </div><a href="https://klbtheme.com/black/portfolio/workshop/" class="work-link"></a>
+                    </div>
+                </article>
+                
+                <article class="element-item  metal"
+                    data-category="transition">
+                    <div class="work-wrapper">
+                        <div class="work-thumbnail"><img
+                                src="https://klbtheme.com/black/wp-content/uploads/2017/04/portfolio-7.jpg"
+                                alt="Architecture"></div>
+                        <div class="work-caption">
+                            <h3 class="work-title font-alt">Architecture</h3><span
+                                class="work-category font-serif">Fashion</span>
+                        </div><a href="https://klbtheme.com/black/portfolio/architecture/" class="work-link"></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="load-more">
+                <a class="btn load-more-btn">Load More</a>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <footer class="footer module-overlay-dark-3">
+            <div class="container-fluid container-custom">
+                <div class="">
+                    <ul class="contact-info font-alt">
+                        <li><a href="#">BRANDON@HAYNES.BIO </a></li>
+                        <li><a href="tel:+447734059593">+(44) 7734 059593 </a></li>
+                        <li><a href="#">NORTHAMPTON, ENGLAND, UK </a></li>
+                    </ul>
+                    <div class="copyright text-center font-alt">
+                        <span>2021 <a href="#">Brandon Haynes</a>, All Rights Reserved.</span>
+                    </div>
+                </div>
+                
+                <!-- SCROLLTOP -->
+                <a class="to-top-link" href="#top">
+                    <i class="fa fa-angle-up"></i>
+                </a>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <!---->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- or -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="{% static 'haynes/assets/js/main.js' %}"></script>
+</body>
+
+</html>
