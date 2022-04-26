@@ -37,6 +37,22 @@ jobs:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
           command: python manage.py test
+      - run:
+          name: Build and push Docker image
+          command: |
+            echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
+            docker build -t haynesb/haynes-portfolio:$TAG .
+            docker push haynesb/haynes-portfolio:$TAG
+  deploy-staging:
+    docker:
+      - image: cimg/python:3.10.2
+
+
+    steps:
+      - run:
+          name: SSH in to DigitalOcean Server & Run Containers via Deploy.sh Script
+          command: ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP “./deploy_staging.sh $CIRCLE_TAG”
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -45,3 +61,4 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build-and-test
+      - deploy-staging
