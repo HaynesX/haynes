@@ -42,7 +42,7 @@ jobs:
           command: |
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
             docker build -t haynesb/haynes-portfolio:$TAG .
-            docker push haynesb/haynes-portfolio:$TAG
+            docker push haynes-portfolio:$TAG
   deploy-staging:
     docker:
       - image: cimg/python:3.10.2
