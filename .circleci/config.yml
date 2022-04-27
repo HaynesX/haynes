@@ -69,7 +69,7 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: test-staging112
+              only: test-staging114
       - deploy-staging:
           requires:
           - build-and-test
@@ -77,4 +77,4 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: test-staging112
+              only: test-staging114
