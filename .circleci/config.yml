@@ -53,7 +53,7 @@ jobs:
     steps:
       - run:
           name: SSH in to DigitalOcean Server & Run Containers via Deploy.sh Script
-          command: ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "bash deploy-staging.sh $CIRCLE_TAG"
+          command: ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "bash deploy-staging.sh $CIRCLE_TAG $DJANGO_SECURITY_KEY"
 
 
 # Invoke jobs via workflows
@@ -67,7 +67,7 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: test-staging122
+              only: test-staging124
       - deploy-staging:
           requires:
           - build-and-test
@@ -75,4 +75,4 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: test-staging122
+              only: test-staging124
