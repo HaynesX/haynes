@@ -44,7 +44,7 @@ jobs:
           command: |
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
             docker build -t haynesb/haynes-portfolio:$CIRCLE_TAG .
-            docker push haynes-portfolio:$CIRCLE_TAG
+            docker push haynesb/haynes-portfolio:$CIRCLE_TAG
   deploy-staging:
     docker:
       - image: cimg/python:3.10.2
@@ -67,7 +67,7 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: test-staging110
+              only: test-staging112
       - deploy-staging:
           requires:
           - build-and-test
@@ -75,4 +75,4 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: test-staging110
+              only: test-staging112
