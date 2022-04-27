@@ -74,4 +74,4 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: test-staging105
+              only: test-staging107
