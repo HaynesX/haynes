@@ -41,7 +41,7 @@ jobs:
           name: Build and push Docker image
           command: |
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
-            docker build -t haynesb/haynes-portfolio:$TAG .
+            docker build -t haynesb/haynes-portfolio:$CIRCLE_TAG .
             docker push haynes-portfolio:$TAG
   deploy-staging:
     docker:
