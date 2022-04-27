@@ -42,7 +42,7 @@ jobs:
           command: |
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
             docker build -t haynesb/haynes-portfolio:$CIRCLE_TAG .
-            docker push haynes-portfolio:$TAG
+            docker push haynes-portfolio:$CIRCLE_TAG
   deploy-staging:
     docker:
       - image: cimg/python:3.10.2
@@ -51,7 +51,7 @@ jobs:
     steps:
       - run:
           name: SSH in to DigitalOcean Server & Run Containers via Deploy.sh Script
-          command: ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "./deploy_staging.sh $CIRCLE_TAG"
+          command: ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "/deploy_staging.sh $CIRCLE_TAG"
 
 
 # Invoke jobs via workflows
@@ -62,9 +62,13 @@ workflows:
     jobs:
       - build-and-test:
           filters:  # indent this and below 2 more spaces
+            branches:
+              ignore: /.*/
             tags:
-              only: test-staging100
+              only: test-staging103
       - deploy-staging:
           filters:  # indent this and below 2 more spaces
+            branches:
+              ignore: /.*/
             tags:
-              only: test-staging100
+              only: test-staging103
