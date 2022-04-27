@@ -55,7 +55,8 @@ jobs:
           name: SSH in to DigitalOcean Server & Run Containers via Deploy.sh Script
           command: |
             ls
-            ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "deploy_staging.sh $CIRCLE_TAG"
+            
+            ssh -oStrictHostKeyChecking=no -v $DROPLET_USER@$DROPLET_IP "/home/circleci/deploy_staging.sh $CIRCLE_TAG"
 
 
 # Invoke jobs via workflows
