@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['DJANGO_SECURITY_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['167.172.57.187']
 
 
 # Application definition
