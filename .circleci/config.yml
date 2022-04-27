@@ -28,6 +28,8 @@ jobs:
     # Then run your tests!
     # CircleCI will report the results back to your VCS provider.
     steps:
+      - setup_remote_docker:
+          version: 19.03.13
       - checkout
       - python/install-packages:
           pkg-manager: pip
@@ -41,7 +43,6 @@ jobs:
           name: Build and push Docker image
           command: |
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
-            systemctl start docker
             docker build -t haynesb/haynes-portfolio:$CIRCLE_TAG .
             docker push haynes-portfolio:$CIRCLE_TAG
   deploy-staging:
@@ -66,7 +67,7 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: test-staging107
+              only: test-staging110
       - deploy-staging:
           requires:
           - build-and-test
@@ -74,4 +75,4 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: test-staging107
+              only: test-staging110
