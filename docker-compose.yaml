@@ -4,10 +4,10 @@ services:
     image: mysql
     restart: always
     environment:
-      MYSQL_DATABASE=${MYSQL_DATABASE}
-      MYSQL_USER=${MYSQL_USER}
-      MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
       # <Port exposed> : < MySQL Port running inside container>
       - '3307:3306'
