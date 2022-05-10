@@ -39,10 +39,7 @@ workflows:
   version: 2
   build:
     jobs:
-      - build-and-test:
-          filters: 
-            branches:
-              ignore: /.*/
+      - build-and-test
       - deploy-staging:
           requires:
           - build-and-test
