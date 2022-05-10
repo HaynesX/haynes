@@ -39,7 +39,10 @@ workflows:
   version: 2
   build:
     jobs:
-      - build-and-test
+      - build-and-test:
+          filters:
+            tags:
+              only: /.*/
       - deploy-staging:
           requires:
           - build-and-test
@@ -47,4 +50,4 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: /v[0-9]+\.[0-9]+\.[0-9]+/
+              only: /^v.*/
